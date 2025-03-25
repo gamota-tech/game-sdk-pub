@@ -1,0 +1,1320 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  overflow: hidden;
+}
+img {
+  max-width: 100%;
+}
+.wrapper {
+  /* background: #fff;
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100dvh;
+  position: fixed;
+  z-index: 9999; */
+}
+/* login view */
+.login {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  z-index: 999;
+}
+.login-wrapper {
+  display: flex;
+  height: 100dvh;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 72px;
+}
+.header .logo {
+  max-width: 140px;
+}
+.btn-close {
+  background: #f2f2f2;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+.content-wrapper {
+  flex: 1;
+}
+.content-wrapper .title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27.28px;
+  margin-bottom: 33px;
+}
+.content-wrapper .login-form {
+  padding: 0 30px;
+}
+.login-form .form-group {
+  margin-bottom: 15px;
+}
+.login-form .form-group .floating-input {
+  position: relative;
+}
+.login-form .form-group input {
+  background: rgb(243, 243, 243);
+  border: 2px solid rgb(243, 243, 243);
+  border-radius: 8px;
+  padding: 16px;
+  color: #4f4f4f;
+  width: 100%;
+  height: 48px;
+  outline: none !important;
+  font-size: 16px;
+  font-weight: 700;
+  transition: border-color 0.3s ease;
+}
+.login-form .form-group input:focus {
+  border: 2px solid rgba(51, 51, 51, 1);
+  padding: 20px 16px 6px;
+}
+.login-form .form-group input:not(:placeholder-shown) {
+  padding: 20px 16px 6px;
+}
+.login-form .form-group label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+.login-form .form-group input:focus + label,
+.login-form .form-group input:not(:placeholder-shown) + label {
+  top: 12px;
+  color: rgba(79, 79, 79, 1);
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 12px;
+}
+.login-form .form-group .error-massage {
+  color: #eb5757;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  padding-left: 23px;
+  background: url(images/ic-error.png) no-repeat 0 0 / 18px 18px;
+  margin: 5px 0;
+}
+.social-login {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 23px;
+  margin-bottom: 53px;
+}
+.social-login .btn {
+  border-radius: 8px;
+  border: 2px solid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 36px;
+  transition: all 0.3s ease;
+}
+.social-login .btn .ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-login .btn.btn-google {
+  border-color: rgba(242, 242, 242, 1);
+  background: rgba(255, 255, 255, 1);
+}
+.social-login .btn.btn-facebook {
+  border-color: rgba(24, 119, 242, 1);
+  background: rgba(24, 119, 242, 1);
+}
+.social-login .btn.btn-apple {
+  border-color: rgba(0, 0, 0, 1);
+  background: rgba(0, 0, 0, 1);
+}
+.social-login .btn.btn-quick {
+  border-color: #ebeff4;
+  background: #ebeff4;
+}
+.button-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #2f80ed;
+  height: 48px;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 22px;
+  outline: none;
+  border: none;
+  margin-bottom: 16px;
+}
+.button-login:disabled {
+  filter: brightness(0.7);
+}
+.quick-action {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.quick-action a {
+  color: #333;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-decoration: none;
+}
+.quick-action a:hover {
+  text-decoration: underline;
+}
+.plus18 {
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.plus18 img {
+  max-width: 100%;
+}
+
+/* register view */
+.register {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  z-index: 999;
+}
+.register-form {
+  width: 100%;
+  height: 100dvh;
+  padding: 25px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.register-form .register-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 35px;
+}
+.register-form .register-header .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.register-form .register-header .title .text {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  color: #bdbdbd;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.register-form .register-header .title .progress {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+.register-form .register-header .title .progress .step-item {
+  width: 20px;
+  height: 2px;
+  background: #d9d9d9;
+  display: block;
+}
+.register-form .register-header .title .progress .step-item.active {
+  background: #2f80ed;
+}
+.register-form .register-header .btn-prev {
+  background: #f2f2f2;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+.register-form .register-header .btn-close {
+  background: #f2f2f2;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+.register-form .form-content {
+  display: flex;
+  flex: 1;
+}
+.register-form .form-content .reg-step {
+  display: none;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: none;
+  flex: 1;
+}
+
+.register-form .form-content .reg-step h4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+  margin-bottom: 32px;
+}
+.register-form .form-content .reg-step h4 .description {
+  font-size: 14px;
+  margin-top: 8px;
+  line-height: 19px;
+  font-weight: 400;
+}
+
+.register-form .form-content .reg-step .form {
+  flex: 1;
+}
+
+.register-form .form-content .reg-step .form .form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.register-form .form-content .reg-step .form .form-group input {
+  background: rgb(243, 243, 243);
+  border: 2px solid rgb(243, 243, 243);
+  font-family: "Nunito Sans", sans-serif;
+  border-radius: 8px;
+  padding: 16px;
+  color: #4f4f4f;
+  width: 100%;
+  height: 48px;
+  outline: none !important;
+  font-size: 16px;
+  font-weight: 700;
+  transition: border-color 0.3s ease;
+}
+
+.register-form .form-content .reg-step .form .form-group select {
+  background: rgb(243, 243, 243);
+  border: 2px solid rgb(243, 243, 243);
+  border-radius: 8px;
+  padding: 13px 16px;
+  color: #4f4f4f;
+  width: 100%;
+  height: 48px;
+  outline: none !important;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  transition: border-color 0.3s ease;
+  appearance: none;
+  text-transform: uppercase;
+}
+
+.register-form .form-content .reg-step .form .select-group.focused label {
+  opacity: 1;
+  top: 12px;
+  color: rgba(79, 79, 79, 1);
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 12px;
+}
+
+.register-form .form-content .reg-step .form .select-group.focused select {
+  padding: 20px 16px 6px;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.register-form .form-content .reg-step .form .select-group label {
+  opacity: 0;
+}
+
+.register-form .form-content .reg-step .form .form-group input:focus {
+  border: 2px solid rgba(51, 51, 51, 1);
+  padding: 20px 16px 6px;
+}
+
+.register-form
+  .form-content
+  .reg-step
+  .form
+  .form-group
+  input:not(:placeholder-shown) {
+  padding: 20px 16px 6px;
+}
+
+.register-form .form-content .reg-step .form .form-group label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  text-transform: uppercase;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+
+.register-form .form-content .reg-step .form .form-group input:focus + label,
+.register-form
+  .form-content
+  .reg-step
+  .form
+  .form-group
+  input:not(:placeholder-shown)
+  + label {
+  top: 12px;
+  color: rgba(79, 79, 79, 1);
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 12px;
+}
+
+.register-form
+  .form-content
+  .reg-step
+  .form
+  .form-group
+  input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+input[type="date"]::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+input[type="date"]::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+input[type="date"]::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+  color: transparent;
+}
+
+.register-form .form-content .reg-step .form .form-group .error-massage {
+  color: #eb5757;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  padding-left: 23px;
+  background: url(images/ic-error.png) no-repeat 0 0 / 18px 18px;
+}
+
+.register-form .form-content .reg-step .form .password-required {
+  margin-bottom: 16px;
+}
+
+.register-form
+  .form-content
+  .reg-step
+  .form
+  .password-required
+  .password-required-item {
+  margin-bottom: 10px;
+  padding-left: 31px;
+  background: url(images/ic-invalid.png) no-repeat 0 0 / 18px 18px;
+  font-size: 12px;
+  color: rgba(130, 130, 130, 1);
+  line-height: 18px;
+  font-weight: 600;
+}
+
+.register-form
+  .form-content
+  .reg-step
+  .form
+  .password-required
+  .password-required-item.valid {
+  background: url(images/ic-valid.png) no-repeat 0 0 / 18px 18px;
+}
+
+.register-form
+  .form-content
+  .reg-step
+  .form
+  .password-required
+  .password-required-item.error {
+  background: url(images/ic-error.png) no-repeat 0 0 / 18px 18px;
+  color: rgba(235, 87, 87, 1);
+}
+
+.register-form .form-content .reg-step .action {
+  display: flex;
+  justify-content: end;
+}
+
+.register-form .form-content .reg-step .action .btn-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 1);
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.register-form .form-content .reg-step .action .btn-next.active,
+.register-form .form-content .reg-step .action .btn-next:hover {
+  background: rgba(47, 128, 237, 1);
+}
+
+.register-form .form-content .reg-step .action .btn-next.active svg path,
+.register-form .form-content .reg-step .action .btn-next:hover svg path {
+  stroke: #fff;
+}
+
+.floating-btn {
+  position: absolute;
+  bottom: 10%;
+  left: -6px;
+  transition: all ease 0.5s;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+}
+
+.floating-btn svg {
+  width: 48px;
+  height: 48px;
+}
+
+.floating-btn.active {
+  left: 14px;
+  display: block;
+}
+
+.floating-btn-main {
+  position: absolute;
+  top: 10%;
+  left: -6px;
+  transition: all ease 0.5s;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+}
+
+.floating-btn-main img {
+  width: 48px;
+  height: 48px;
+}
+
+.floating-btn-main svg {
+  width: 48px;
+  height: 48px;
+}
+
+.floating-btn-main.active {
+  left: 14px;
+  display: block;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background: rgba(13, 20, 36, 0.6);
+  display: none;
+  z-index: 999;
+}
+.modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+/* modal support */
+#gmogame-support .modal-content {
+  position: relative;
+  max-width: 330px;
+  width: 100%;
+  border-radius: 15px;
+  background: #fff;
+  padding: 20px;
+}
+
+#gmogame-support .modal-content .modal-title {
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 22px;
+  margin-bottom: 12px;
+}
+
+#gmogame-support .modal-content .modal-description {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 18px;
+  color: rgba(33, 33, 33, 1);
+}
+
+#gmogame-support .modal-content .list-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#gmogame-support .modal-content .list-btn button {
+  background: rgba(243, 243, 249, 1);
+  border-radius: 12px;
+  height: 59px;
+  padding: 15px 19px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: none;
+}
+
+#gmogame-support .modal-content .list-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+#gmogame-support .modal-content .list-btn span {
+  color: rgba(63, 140, 255, 1);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+#gmogame-support .modal-content .close-modal {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+#gmogame-support .modal-content .close-modal span {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+/* modal user */
+#gmogame-user .modal-content {
+  position: relative;
+  max-width: 330px;
+  width: 100%;
+  border-radius: 15px;
+  background: #fff;
+  padding: 20px;
+}
+
+#gmogame-user .modal-content .modal-title {
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 22px;
+  margin-bottom: 12px;
+}
+
+#gmogame-user .modal-content .modal-description {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 18px;
+  color: rgba(33, 33, 33, 1);
+}
+
+#gmogame-user .modal-content .list-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#gmogame-user .modal-content .list-btn button {
+  background: rgba(243, 243, 249, 1);
+  border-radius: 12px;
+  height: 59px;
+  padding: 15px 19px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: none;
+}
+
+#gmogame-user .modal-content .list-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+#gmogame-user .modal-content .list-btn span {
+  color: rgba(63, 140, 255, 1);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+#gmogame-user .modal-content .close-modal {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+#gmogame-user .modal-content .close-modal span {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+/* modal xác thực */
+
+#gmogame-verify .modal-content {
+  position: relative;
+  max-width: 330px;
+  width: 100%;
+  border-radius: 15px;
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+#gmogame-verify .modal-content .modal-title {
+  margin-top: 16px;
+  margin-bottom: 13px;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+#gmogame-verify .modal-content .modal-description {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 18px;
+  font-weight: 400;
+}
+
+#gmogame-verify .modal-content .list-btn {
+  display: flex;
+  gap: 15px;
+}
+#gmogame-verify .modal-content .list-btn button {
+  flex: 1;
+  background: rgba(243, 243, 249, 1);
+  color: rgba(63, 140, 255, 1);
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+#gmogame-verify .modal-content .list-btn button.active {
+  background: rgba(63, 140, 255, 1);
+  color: #fff;
+}
+
+#gmogame-popup-image .modal-content {
+  max-width: 330px;
+  width: 100%;
+  position: relative;
+}
+#gmogame-popup-image .modal-content .close-modal {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -35px;
+  right: 0;
+  cursor: pointer;
+}
+#gmogame-popup-image .modal-content .banner a {
+  display: block;
+}
+
+#gmogame-popup-image .modal-content .banner a img{
+  width: 100%;
+}
+
+#gmogame-popup-image .modal-content .hide-popup {
+  margin-top: 5px;
+}
+
+#gmogame-popup-image .modal-content .hide-popup .check-container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 15px;
+  color: rgba(255, 255, 255, 1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#gmogame-popup-image .modal-content .hide-popup .check-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+#gmogame-popup-image .modal-content .hide-popup .check-container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+}
+
+#gmogame-popup-image
+  .modal-content
+  .hide-popup
+  .check-container:hover
+  input
+  ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+#gmogame-popup-image
+  .modal-content
+  .hide-popup
+  .check-container
+  input:checked
+  ~ .checkmark {
+  background-color: #fff;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+#gmogame-popup-image .modal-content .hide-popup .check-container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+#gmogame-popup-image
+  .modal-content
+  .hide-popup
+  .check-container
+  input:checked
+  ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+#gmogame-popup-image .modal-content .hide-popup .check-container .checkmark:after {
+  left: 3px;
+  top: 0px;
+  width: 4px;
+  height: 8px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#gmogame-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+#gmogame-loading .loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+#sdk-alert {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+#sdk-alert .alert-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#sdk-alert .alert-content {
+  position: relative;
+  max-width: 330px;
+  width: 100%;
+  border-radius: 15px;
+  background: #fff;
+  padding: 20px;
+  color: #000;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+}
+#sdk-alert .alert-content h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+#sdk-alert .alert-content p {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+#sdk-alert .alert-content button{
+  background: #2F80ED;
+  color: #fff;
+  padding: 5px 15px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+}
+
+
+/* modal xác thực */
+
+#gmogame-popup-text .modal-content {
+  position: relative;
+  max-width: 330px;
+  width: 100%;
+  border-radius: 15px;
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+#gmogame-popup-text .modal-content .modal-title {
+  margin-top: 16px;
+  margin-bottom: 13px;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+#gmogame-popup-text .modal-content .modal-description {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 18px;
+  font-weight: 400;
+}
+
+#gmogame-popup-text .modal-content .list-btn {
+  display: flex;
+  gap: 15px;
+}
+#gmogame-popup-text .modal-content .list-btn button {
+  flex: 1;
+  background: rgba(243, 243, 249, 1);
+  color: rgba(63, 140, 255, 1);
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+#gmogame-popup-text .modal-content .list-btn button.active {
+  background: rgba(63, 140, 255, 1);
+  color: #fff;
+}
+
+/* connect account */
+
+.update-account {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  z-index: 999;
+}
+.update-wrapper {
+  display: flex;
+  height: 100dvh;
+  flex-direction: column;
+}
+
+.update-wrapper .header {
+  justify-content: flex-end;
+  margin-bottom: 25px;
+}
+.update-account-form {
+  padding: 0 25px;
+}
+.update-account-form .title {
+  text-align: left;
+  margin-bottom: 22px;
+}
+.update-account-form .form-group {
+  position: relative;
+  margin-bottom: 16px;
+}
+.update-account-form .form-group input{
+  width: 100%;
+  border-radius: 8px;
+  background: #f3f3f9;
+  padding: 5px 15px;
+  font-size: 14px;
+  line-height: 2;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  color: #828282;
+  font-family: "Nunito Sans", sans-serif;
+  padding-left: 43px;
+}
+.update-account-form .form-group input.no-icon{
+  padding: 5px 15px;
+}
+
+.update-account-form .form-group svg{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+}
+.update-account-form .form-group p {
+  margin-bottom: 0;
+  line-height: 28px;
+}
+.update-account-form .form-group a {
+  color: #2F80ED;
+  text-decoration: none;
+}
+.update-account-form p {
+  font-size: 12px;
+  line-height: 20px;
+  margin-bottom: 21px;
+  color: #4F4F4F;
+}
+
+.update-account-form p span {
+  color: #2F80ED;
+}
+
+.update-account-form .btn-connect-email {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border-radius: 8px;
+  background: #8590a6;
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  margin-bottom: 17px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 20px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.social-connect {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 23px;
+  margin-bottom: 53px;
+}
+.social-connect .btn {
+  border-radius: 8px;
+  border: 2px solid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 36px;
+  transition: all 0.3s ease;
+}
+.social-connect .btn .ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-connect .btn.btn-google {
+  border-color: rgba(242, 242, 242, 1);
+  background: rgba(255, 255, 255, 1);
+}
+.social-connect .btn.btn-facebook {
+  border-color: rgba(24, 119, 242, 1);
+  background: rgba(24, 119, 242, 1);
+}
+.social-connect .btn.btn-apple {
+  border-color: rgba(0, 0, 0, 1);
+  background: rgba(0, 0, 0, 1);
+}
+.button-action {
+  padding: 0 25px;
+  margin-bottom: 34px;
+}
+
+.button-action button {
+  width: 100%;
+  padding: 7px;
+  text-align: center;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid #ebebeb;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+  font-family: "Nunito Sans", sans-serif;
+}
+.button-action .continue-game {
+  color: #7D7D7D;
+  background: transparent;
+}
+
+.button-action .btn-confirm {
+  color: #fff;
+  background: #3F8CFF;
+}
+
+/* modal switch account */
+
+#gmogame-switch-account .modal-content {
+  position: relative;
+  max-width: 330px;
+  width: 100%;
+  border-radius: 15px;
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+#gmogame-switch-account .modal-content .modal-title {
+  margin-top: 16px;
+  margin-bottom: 13px;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+#gmogame-switch-account .modal-content .modal-description {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 18px;
+  font-weight: 400;
+}
+
+#gmogame-switch-account .modal-content .list-btn {
+  display: flex;
+  gap: 15px;
+}
+#gmogame-switch-account .modal-content .list-btn button {
+  flex: 1;
+  background: rgba(243, 243, 249, 1);
+  color: rgba(63, 140, 255, 1);
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+#gmogame-switch-account .modal-content .list-btn button.active {
+  background: rgba(63, 140, 255, 1);
+  color: #fff;
+}
+
+/**
+Sidebar
+*/
+#gmogame-sidebar-mark {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(13, 20, 36, 0.6);
+  z-index: -1;
+}
+
+#gmogame-sidebar-mark.active {
+  z-index: 999;
+}
+
+#gmogame-sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  max-width: 300px;
+  min-width: 280px;
+  height: 100%;
+  background: #fff;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s all ease;
+}
+
+#gmogame-sidebar.active {
+  right: 0;
+  display: flex!important;
+}
+
+#gmogame-sidebar .top-sidebar {
+  padding: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#gmogame-sidebar .top-sidebar .logo{
+  max-width: 125px;
+}
+
+#gmogame-sidebar .top-sidebar .btn-close {
+  width: 32px;
+  height: 32px;
+  border-radius: 0;
+}
+
+#gmogame-sidebar .main-sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+#gmogame-sidebar .main-sidebar .userinfo {
+  border-radius: 5px;
+  background: #f9f9f9;
+  padding: 7px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+#gmogame-sidebar .main-sidebar .userinfo .info .label-info {
+  color: #565656;
+  font-size: 10px;
+}
+#gmogame-sidebar .main-sidebar .userinfo .user-action a {
+  width: 50px;
+  font-size: 9px;
+  color: #3f8cff;
+  text-align: right;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#gmogame-sidebar .main-sidebar .userinfo .info .username {
+  font-size: 14px;
+  font-weight: 600;
+}
+#gmogame-sidebar .main-sidebar .menu-action {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#gmogame-sidebar .main-sidebar .menu-action .item-menu {
+  border-radius: 5px;
+  background: #f9f9f9;
+  padding: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  font-size: 14px;
+  color: #111;
+}
+
+#gmogame-sidebar .bottom-sidebar {
+  margin-bottom: 30px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#gmogame-sidebar .bottom-sidebar .btn-logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #828282;
+  gap: 6px;
+  text-decoration: none;
+  font-size: 12px;
+}
+

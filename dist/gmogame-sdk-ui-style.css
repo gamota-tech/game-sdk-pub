@@ -126,7 +126,7 @@ img {
   font-weight: 600;
   line-height: 18px;
   padding-left: 23px;
-  background: url(images/ic-error.png) no-repeat 0 0 / 18px 18px;
+  background: url(https://cdn.jsdelivr.net/gh/gamota-tech/game-sdk-pub@main/dist/images/ic-error.png) no-repeat 0 0 / 18px 18px;
   margin: 5px 0;
 }
 .social-login {

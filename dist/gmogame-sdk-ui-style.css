@@ -829,12 +829,11 @@ input[type="date"]::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
   border-radius: 6px;
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  line-height: 28px;
   top: -35px;
   right: 0;
   cursor: pointer;
+  text-align: center;
 }
 #gmogame-popup-image .modal-content .banner a {
   display: block;
